@@ -25,7 +25,6 @@ app.get("/time/newyork", (req, res) => {
 
 
 
-
 app.get("/time/example", (req, res) => {
   const currentTime = moment()
     .tz("example/example")
