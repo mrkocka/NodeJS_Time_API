@@ -23,5 +23,17 @@ app.get("/time/newyork", (req, res) => {
   res.json({ timezone: "America/New_York", current_time: currentTime });
 });
 
+
+
+
+app.get("/time/example", (req, res) => {
+  const currentTime = moment()
+    .tz("example/example")
+    .format("YYYY-MM-DD HH:mm:ss");
+  res.json({ timezone: "example/example", current_time: currentTime });
+});
+
+//Itt bővítheted az időzónákat
+
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
